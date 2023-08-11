@@ -57,8 +57,16 @@ html {
     color: white;
     font-size: 22px;
 }
+.protfolio .header .links .fa-xmark {
+    display: none;
+    color: white;
+    font-size: 22px;
+}
 @media (min-width: 768px) {
     .protfolio .header .links .toggle-menu {
+        display: none;
+    }
+    .protfolio .header .links .fa-xmark {
         display: none;
     }
 }
@@ -74,23 +82,18 @@ html {
     color: #ffffff;
 }
 @media (max-width: 767px) {
-    .protfolio .header .links ul {
+    .protfolio .header .links .toggle-menu + ul {
         display: none;
-    }
-    .protfolio .header .links .toggle-menu:hover + ul {
-        display: flex;
         flex-direction: column;
         position: absolute;
         top: 10%;
         left: 0;
         width: 100%;
         background-color: rgb(0 0 0 / 80%);
+        padding: 15px;
     }
     .protfolio .header .links ul:hover {
         display: flex;
-    }
-    .protfolio .header .links .toggle-menu:hover + ul li a {
-        padding: 15px;
     }
 }
 .protfolio .content .text {
@@ -152,7 +155,6 @@ html {
 .about-me {
     text-align: center;
     background-color: #004a4d;
-
 }
 .about-me h1 {
     margin: 0 0 50px;
@@ -190,7 +192,7 @@ html {
 }
 @media (max-width: 767px) { 
     .about-me .content {
-        padding: 30px 55px;
+        padding: 55px;
     }
 }
 .about-me img {
