@@ -281,7 +281,7 @@ html {
     border-radius: 18px;
     transition: 0.5s;
 }
-.skills .content .box:hover.box::after{
+.skills .content .active.box::after{
     top: 178px;
 }
 .skills .content .box p {

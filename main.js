@@ -15,3 +15,16 @@ butClo.onclick = function () {
     butLin.style.display = "block";
     this.style.display = "none";
 }
+
+//Skills animashen 
+
+let boxEle = document.querySelectorAll(".box");
+
+boxEle.forEach((bo) => {
+    bo.addEventListener("click", (e) => {
+        boxEle.forEach((b) => {
+            b.classList.remove("active");
+        });
+        e.currentTarget.classList.add(`active`);
+    });
+});
