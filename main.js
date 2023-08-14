@@ -25,6 +25,17 @@ boxEle.forEach((bo) => {
         boxEle.forEach((b) => {
             b.classList.remove("active");
         });
-        e.currentTarget.classList.add(`active`);
+        //chaks not one click 
+        if(bo.getAttribute("id") !== "active"){
+            e.currentTarget.classList.add(`active`);
+            //Resaet All Elemants id => ""
+            boxEle.forEach((b) => {
+                b.setAttribute("id", "") ;
+            });
+            //This Elemant Resaet id => "active"
+            bo.setAttribute("id", "active");
+        } else{ //Resaet This Elemant id => ""
+            bo.setAttribute("id", "") ;
+        };
     });
 });
