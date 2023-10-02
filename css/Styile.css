@@ -281,13 +281,128 @@ html {
     border-radius: 18px;
     transition: 0.5s;
 }
-.skills .content .active.box::after{
-    top: 178px;
+@media (min-width: 768px) {
+    .skills .content .box:hover:after{
+        top: 178px;
+    }
+}
+@media (max-width: 767px) {
+    .skills .content .active.box::after{
+        top: 178px;
+    }
 }
 .skills .content .box p {
     font-size: 14px;
 }
 /* End skills */
+/* Start business*/
+.business {
+    text-align: center;
+    padding-bottom: 70px;
+    background-color: #183446;
+}
+.business h1 {
+    margin: 0 0 130px;
+    padding-top: 100px;
+    position: relative;
+    color: var(--Main-color);
+}
+.business h1::before {
+    content: "";
+    width: 100px;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.business h1::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #183446;
+    border: 1px solid #ffffff;
+    position: absolute;
+    bottom: -23px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.business .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.business .content .boxs{
+    width: 235px;
+    height: 316px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.business .content .boxs img {
+    width: 235px;
+    height: 316px;
+    border-radius: 15px;
+    transform: scale(1, 1) rotate(0deg);
+    transition: 0.5s transform;
+}
+@media (min-width: 768px) {
+    .business .content .boxs:hover > img {
+        transform: scale(1.2, 1.2) rotate(-2deg);
+    }
+}
+@media (max-width: 767px) {
+    .business .content .active.boxs img {
+        transform: scale(1.2, 1.2) rotate(-2deg);
+    }
+}
+.business .content .boxs .txet {
+    width: 235px;
+    height: 147px;
+    padding: 10px 15px;
+    background-color: #F4F4F4;
+    color: #020307;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0px 0px 15px 15px ;
+    position: relative;
+    top: 0;
+    transition: 0.5s top;
+}
+@media (min-width: 768px) {
+    .business .content .boxs:hover > .txet{
+        top: -150px;
+    }
+}
+@media (max-width: 767px) {
+    .business .content .active.boxs .txet {
+        top: -150px;
+    }
+}
+.business .content .boxs .txet p {
+    font-size: 14px;
+}
+#box2{
+    margin-top: -30px;
+}
+.business .content .boxs .txet a {
+    width: 68px;
+    height: 25px;
+    background-color: #01D5A2;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: #020307;
+    border-radius: 5px;
+}
+/* End business */
 /* Start Footer */
 .footer {
     padding: 30px 0;
